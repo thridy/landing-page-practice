@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* LANDING PAGE */
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    z-index: 1000; /* Ensure navbar is on top of other elements */
+}
+
+main {
+    padding-top: 100px; /* Adjust this value according to your navbar's height */
+}
+
+
+.bg-brown {
+    background-color: rgba(40, 19, 19, 0.95); /* Brown color with 95% opacity */
+}
+
+.logo-container {
+    display: inline-block;
+    width:50px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.logo-container img {
+    max-width: 100%; /* Ensures the image scales down with its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 767px) {
+    .logo-container img {
+        width: 40px; /* Adjust as needed for smaller screens */
+        height: auto;
+    }
+}
+
+
+.btn-custom-yellow {
+    background-color: #facc15; /* Custom yellow color */
+    color: #000; /* Text color, adjust as needed */
+    font-weight: bold;
+}
+
+.btn-custom-yellow:hover {
+    background-color: #e3b84b; /* Slightly darker color for hover effect */
+    color: #000; /* Text color on hover */
+}
+
+.navbar-brand,.navbar-address {
+    color: #facc15 !important; /* Applies the color and overrides Bootstrap's default styling */
+}
+
+.navbar-address, .navbar-brand:hover {
+    color: #d1a600 !important; /* Optional: changes color on hover */
+}
+
+
+@media (max-width: 767.98px) {
+    .navbar-collapse-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column; /* Stack items vertically */
+    }
+    .navbar-collapse-center .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-collapse-center .btn {
+        margin-top: 1rem; /* Add some spacing above the button */
+    }
+}
+
+.navbar-address {
+    color: #fff; /* Or any color you want */
+    font-size: 0.75rem; /* Smaller font size */
+    text-align: center; /* Center the text below the brand name */
+    margin-top: -2.5px; /* Reduced space between the brand name and the address */
+}
+
+.nav-item{
+    font-weight: bold;
+}
+
+.main-bg {
+    background-image: url('img/landingpage.png');
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image in the viewport */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    width: 100vw; /* Set width to 100% of the viewport width */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    text-align: center; /* Center align the text */
+    padding: 20px; /* Optional: Add padding */
+    box-sizing: border-box; /* Include padding in height/width calculations */
+    color: white; /* Set text color for contrast */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+main {
+    padding-top: 100px; /* Adjust this value according to your navbar's height */
+    margin-top: 20px; /* Optional: Add margin if needed */
+}
+
+
+.big-welcome {
+    font-size: 5vw; /* Adjusts the size relative to the viewport width */
+    font-weight: bolder;
+    color: #fafafa;
+    text-shadow: 4px 4px 7px #281313;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 600px) {
+    .big-welcome {
+        font-size: 4vw; /* Slightly smaller size for medium screens */
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1200px) {
+    .big-welcome {
+        font-size: 5vw; /* Smaller size for large screens to fit well */
+    }
+}
+
+
+
+.quote {
+    font-size: 12px;
+    font-weight: 450;
+    color: #fafafa;
+    text-shadow: 4px 4px 7px #281313;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 600px) {
+    .quote {
+        font-size: 15px;
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1200px) {
+    .quote {
+        font-size: 17px;
+    }
+}
+
+section.about {
+    background-color: #281313; 
+    padding: 40px 20px;
+    color: #fafafa; /* Changed from white to #fafafa */
+    text-align: left;
+}
+
+section.about .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #654a4a;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+section.about .about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+section.about .about-text h2 {
+    font-size: 36px;
+    color: #fafafa; /* Changed from white to #fafafa */
+    margin: 0 0 20px 0;
+    position: relative; /* Added for the pseudo-element */
+}
+
+section.about .about-text h2::after {
+    content: '';
+    display: block;
+    width: 100%; /* Set width to 100% of the h2 element */
+    max-width: 1045px; /* Adjust max-width for larger screens */
+    height: 5px;
+    background-color: #facc15;
+    position: absolute;
+    bottom: -10px; /* Adjusted position */
+    left: 0;
+    border-radius: 5px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section.about .about-text h2 {
+        font-size: 28px;
+    }
+
+    section.about .about-text h2::after {
+        max-width: 800px; /* Adjust max-width for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    section.about .about-text h2 {
+        font-size: 24px;
+    }
+
+    section.about .about-text h2::after {
+        max-width: 400px; /* Adjust max-width for small screens */
+    }
+}
+
+section.about .about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fafafa; /* Changed from white to #fafafa */
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+section.about img {
+    margin-top: 40px;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section.about .container {
+        flex-direction: column;
+        text-align: center; /* Center text for small screens */
+    }
+
+    section.about .about-text {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add spacing below text */
+    }
+
+    section.about .about-text h2 {
+        font-size: 28px;
+    }
+
+    section.about .about-text p {
+        font-size: 14px;
+    }
+
+    section.about img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Ensure image doesn't get too large */
+    }
+}
+
+@media (max-width: 576px) {
+    section.about .about-text h2 {
+        font-size: 24px;
+    }
+
+    section.about .about-text p {
+        font-size: 12px;
+    }
+
+    section.about img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #281313;
+    color: white;
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #654a4a;
+    padding: 20px; /* Adjust padding for responsiveness */
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+footer .contacts {
+    margin-top: 20px; /* Space above contacts section */
+}
+
+footer .contacts h3 {
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+footer .contacts h3::after {
+    content: '';
+    display: block;
+    width: 1000px;
+    height: 5px;
+    background-color: #facc15;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+footer .contacts .contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
+}
+
+footer .contacts .contact-item {
+    background-color: #281313;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 300px; /* Adjusts max-width to ensure items fit nicely */
+    box-sizing: border-box;
+    margin: 10px; /* Adds space around items */
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+}
+
+footer .contacts .contact-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+footer .contacts .contact-item p {
+    margin: 5px 0;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    footer .container {
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer .contacts h3 {
+        font-size: 20px;
+    }
+
+    footer .contacts h3::after {
+        width: 80%;
+    }
+
+    footer .contacts .contact-info {
+        gap: 15px; /* Adjust space between items */
+    }
+
+    footer .contacts .contact-item {
+        padding: 15px; /* Reduced padding */
+        max-width: 250px; /* Slightly smaller max-width */
+    }
+
+    footer .contacts .contact-item h4 {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    footer .contacts .contact-item p {
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+    footer .container {
+        padding: 10px; /* Further adjust padding for small screens */
+    }
+
+    footer .contacts {
+        margin-top: 15px; /* Reduced space above contacts section */
+    }
+
+    footer .contacts h3 {
+        font-size: 18px;
+    }
+
+    footer .contacts h3::after {
+        width: 70%;
+    }
+
+    footer .contacts .contact-info {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 10px; /* Reduced space between items for vertical stack */
+    }
+
+    footer .contacts .contact-item {
+        max-width: 100%; /* Full width on very small screens */
+        padding: 10px; /* Further reduced padding */
+        margin: 5px 0; /* Reduced margin for better fit */
+    }
+
+    footer .contacts .contact-item h4 {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    footer .contacts .contact-item p {
+        font-size: 12px; /* Smaller font size */
+    }
+}
+
+
